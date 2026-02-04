@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "sqlite-todo": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-server-sqlite-npx",
+        "C:\\Users\\SNHIM\\Desktop\\VCc02_project\\todo-mcp-app\\backend\\database.db"
+      ]
+    }
+  }
+}

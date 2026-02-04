@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO App с MCP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 TODO приложение</h1>
+            <p class="subtitle">Управляется через MCP SQLite сервер</p>
+        </header>
+
+        <!-- Stats -->
+        <div class="stats">
+            <div class="stat-card">
+                <span class="stat-number" id="totalTodos">0</span>
+                <span class="stat-label">Всего</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="activeTodos">0</span>
+                <span class="stat-label">Активных</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" id="completedTodos">0</span>
+                <span class="stat-label">Выполнено</span>
+            </div>
+        </div>
+
+        <!-- Add Todo Form -->
+        <div class="add-todo">
+            <input 
+                type="text" 
+                id="todoInput" 
+                placeholder="Что нужно сделать?" 
+                autocomplete="off"
+            >
+            <button id="addBtn">Добавить</button>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="active">Активные</button>
+            <button class="filter-btn" data-filter="completed">Выполненные</button>
+        </div>
+
+        <!-- Todo List -->
+        <div id="todoList" class="todo-list">
+            <!-- Todos will be rendered here -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="empty-state">
+            <p>📋 Нет задач</p>
+            <p class="empty-subtitle">Добавьте первую задачу выше</p>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>💡 Попробуй в Cursor: "Покажи все задачи через MCP"</p>
+            <p class="mcp-info">🚀 Работает с MCP SQLite Server</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
